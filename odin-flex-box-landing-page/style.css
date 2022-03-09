@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: clamp(15rem, 90%, 80rem);
+    margin-inline: auto;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    
+   
+}
+
+
+
+.nav {
+    display: flex;
+    gap: 5rem;
+    list-style: none;
+    
+}
+.nav a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+
+
+.hero-section {
+    display: flex;
+    align-items: center;
+}
+
+.hero-text {
+    flex: 50%;
+    width: 30%;
+}
+.hero-img {
+    flex: 50%;
+}
