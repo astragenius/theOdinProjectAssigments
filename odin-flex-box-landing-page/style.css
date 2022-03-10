@@ -27,6 +27,7 @@ img {
 
 body {
     font-family: 'Roboto', sans-serif;
+    height: 100vh;
 }
 
 
@@ -56,6 +57,10 @@ body {
 .bold {font-weight: bolder;}
 .light {font-weight: 200;}
 .italic {font-style: italic;}
+
+.p-2 {
+    padding: 2em;
+}
 
 .btn {
     background: none;
@@ -143,10 +148,12 @@ body {
 
 
 
-
 .cta-section {
     justify-content: space-around;
     align-items: center;
+    border-radius: 5px;
+    margin: 5em 0;
+    
 }
 
 .footer {
