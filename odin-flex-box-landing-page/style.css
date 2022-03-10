@@ -54,12 +54,33 @@ body {
 .fs-18 { font-size: var(--fs-18);}
 
 .bold {font-weight: bolder;}
+.light {font-weight: 200;}
 .italic {font-style: italic;}
+
+.btn {
+    background: none;
+    border: none;
+    padding: 0.5em 1.6em;
+    border-radius: 5px;
+    
+}
+
+.hero-btn {
+    background-color: var(--blue-cl);
+}
+
+.btn-cfa {
+    border: 2px solid var(--quote-bg)
+}
+
 
 
 .flex {
     display: flex;
 }
+
+
+
 
 
 
@@ -90,11 +111,3 @@ body {
     
    
 }
-
-/* .hero-text {
-    flex: 50%;
-    width: 30%;
-}
-.hero-img {
-    flex: 50%;
-} */
