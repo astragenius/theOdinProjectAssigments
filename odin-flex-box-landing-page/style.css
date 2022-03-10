@@ -140,3 +140,15 @@ body {
     -o-object-fit: cover;
        object-fit: cover;
 }
+
+
+
+
+.cta-section {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer {
+    justify-content: center;
+}
