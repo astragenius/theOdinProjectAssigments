@@ -108,6 +108,35 @@ body {
 
 
 .hero-section {
-    
+    align-items: center;
    
+}
+
+.hero-text {
+    flex: 50%;
+
+}
+
+.hero-img {
+    flex: 50%;
+    
+}
+
+
+.information-section {
+    gap: 1rem;
+   
+}
+
+.info-title {
+    
+    text-align: center;
+}
+
+.information-section img {
+    border-radius: 10px;
+    width: 200px;
+    aspect-ratio: 1;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
