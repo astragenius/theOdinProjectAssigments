@@ -1,3 +1,17 @@
+:root {
+    --dark-bg: #1f2937;
+    --hero-text-cl: #f9faf8;
+    --hero-secont-text-cl: #e5e7eb;
+    --blue-cl: #3882f6;
+    --header-dark: #1f2937;
+    --quote-bg: #e5e7eb;
+   
+    --fs-48: 48px;
+    --fs-36: 36px;
+    --fs-24: 24px;
+    --fs-18: 18px;
+}
+
 *,
 *::before,
 *::after {
@@ -11,11 +25,38 @@ img {
     display: block;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* utility classes */
+
 .wrapper {
-    width: 90%;
-    max-width: clamp(15rem, 90%, 80rem);
+    width: min(100% - 2rem, 70rem);
     margin-inline: auto;
 }
+
+/* color */
+.dark-bg {background-color: var(--dark-bg);}
+.light-bg {background-color: var(--quote-bg);}
+.blue-bg {background-color: var(--blue-cl);}
+
+.fc-dark {color: var(--header-dark)}
+.fc-light {color: var(--hero-secont-text-cl)}
+
+/* font-size */
+
+.fs-48 {font-size: var(--fs-48);}
+.fs-36 {font-size: var(--fs-36);}
+.fs-24 {font-size: var(--fs-24);}
+.fs-18 { font-size: var(--fs-18);}
+
+.bold {font-weight: bolder;}
+.italic {font-style: italic;}
+
+
+
 
 
 .header {
