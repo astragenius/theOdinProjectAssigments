@@ -1,7 +1,7 @@
 # The Odin Project 
 
 
-![The odin Project](/the-odin-img.png)
+![The odin Project](/img/the-odin-img.png)
 
 
 ## Project Assigments
