@@ -58,20 +58,26 @@ body {
 .light {font-weight: 200;}
 .italic {font-style: italic;}
 
-.p-2 {
-    padding: 2em;
-}
+.p-2 {padding: 2em;}
+.mt-1 {margin-top: 1em}
+.mt-2 {margin-top: 2em}
 
 .btn {
     background: none;
     border: none;
     padding: 0.5em 1.6em;
     border-radius: 5px;
+    cursor: pointer;
+
     
 }
 
 .hero-btn {
     background-color: var(--blue-cl);
+    transition: 0.3s ease;
+}
+.hero-btn:hover {
+    background-color: #73a5f5;
 }
 
 .btn-cfa {
@@ -108,6 +114,9 @@ body {
     text-decoration: none;
     cursor: pointer;
     color: var(--hero-text-cl)
+}
+.nav a:hover {
+    color: #e2e2e2;
 }
 
 
@@ -153,6 +162,7 @@ body {
     align-items: center;
     border-radius: 5px;
     margin: 5em 0;
+    padding: 4em 0;
     
 }
 
