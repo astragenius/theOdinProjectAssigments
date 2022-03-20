@@ -8,4 +8,5 @@
 
 - [Recipes Site](/odin-recipes/)
 - [Landing Page](/odin-flex-box-landing-page/)
+- [Rock Paper Scissors](/rock-paper-scissors/)
 
