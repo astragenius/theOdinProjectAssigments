@@ -28,27 +28,27 @@ function checkWinner(pChoice, cChoice) {
 
     if(pChoice === 'rock' && cChoice === 'paper') {
 
-        return `Computer wins with ${cChoice}`; 
+        return false; 
 
     }if(pChoice === 'rock' && cChoice === 'scissors') {
 
-        return `Player wins with ${pChoice}`; 
+        return true; 
 
     }if(pChoice === 'paper' && cChoice === 'rock') {
 
-        return `Player wins with ${pChoice}`; 
+        return true; 
 
     }if(pChoice === 'paper' && cChoice === 'scissors') {
 
-        return `computer wins with ${cChoice}`; 
+        return false; 
 
     }if(pChoice === 'scissors' && cChoice === 'paper') {
 
-        return `Player wins with ${pChoice}`;
+        return true;
 
     }if(pChoice === 'scissors' && cChoice === 'rock') {
 
-        return `computer wins with ${cChoice}`;
+        return false;
     }else {
         return `Its a draw! Player: ${pChoice} Computer: ${cChoice}`;
     }
@@ -69,10 +69,19 @@ function playRound() {
 function game() {
 
     for(let i = 0; i < 5; i++) {
-        playRound();
+        let round = playRound();
+        if(round == true) {
+             console.log('Player won the game')
+        } else if(round == false) {
+            console.log('Computer won the game')
+        }else {
+            console.log('Its a draw');
+        }
+        
     }
-}
 
+    return 'GAme finished'
+}
 
 
 
