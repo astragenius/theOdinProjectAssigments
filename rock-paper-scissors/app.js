@@ -4,14 +4,14 @@ const choices = ['rock', 'paper', 'scissors'];
 
 function computerChoice() {
     let cChoice = choices[Math.floor(Math.random() * 3)];
-    console.log(cChoice);
+    
     return cChoice;
 }
 
 // a playerChoice function that ask the Player with prompt to choose between "rock, paper, scissors"
 function playerChoice() {
     let input = prompt('Make a choice! "Rock, Paper, Scissors').toLowerCase();
-    console.log(input);
+   
     if(choices.includes(input)) {
         return input;
     } else {
@@ -66,7 +66,14 @@ function playRound() {
 
 }    
 
-console.log(playRound());
+function game() {
+
+    for(let i = 0; i < 5; i++) {
+        playRound();
+    }
+}
+
+
 
 
 
