@@ -1,8 +1,8 @@
 
 // a comptuerChoice fuction that gives randomly "rock, paper, siccors" back.
+const choices = ['rock', 'paper', 'scissors'];
 
 function computerChoice() {
-    const choices = ['rock', 'paper', 'scissors'];
     let cChoice = choices[Math.floor(Math.random() * 3)];
     console.log(cChoice);
     return cChoice;
@@ -10,7 +10,15 @@ function computerChoice() {
 
 // a playerChoice function that ask the Player with prompt to choose between "rock, paper, scissors"
 function playerChoice() {
-    return prompt('Make a choice! "Rock, Paper, Scissors');
+    let input = prompt('Make a choice! "Rock, Paper, Scissors').toLowerCase();
+    console.log(input);
+    if(choices.includes(input)) {
+        return input;
+    } else {
+        alert('Please give "Rock, Paper, Scissors" in the input field!')
+        return "Falscher Wert"
+    }
+    
     
     
 }
@@ -56,6 +64,8 @@ function checkWinner(pChoice, cChoice) {
     }
     
 }
+
+console.warn(player);
 
 console.log(checkWinner(player, computer));
 
