@@ -4,10 +4,15 @@
 function computerChoice() {
     const choices = ['rock', 'paper', 'scissors'];
     let randomInt = Math.floor(Math.random() * 3);
-    console.log(choices[randomInt]); 
+    return choices[randomInt];
 }
 
 // a playerChoice function that ask the Player with prompt to choose between "rock, paper, scissors"
+function playerChoice() {
+    return prompt('Make a choice! "Rock, Paper, Scissors');
+    
+    
+}
 
 
 // a playround function thats plays one round of the game.
@@ -17,4 +22,4 @@ function computerChoice() {
 //a function that checks how has won the game.
 
 
-computerChoice();
+console.log(playerChoice());
