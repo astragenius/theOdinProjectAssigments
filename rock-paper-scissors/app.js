@@ -23,17 +23,7 @@ function playerChoice() {
     
 }
 
-
-// a playround function thats plays one round of the game.
-
-
-
 //a function that checks how has won the game.
-
-const player = playerChoice();
-const computer = computerChoice();
-
-
 function checkWinner(pChoice, cChoice) {
 
     if(pChoice === 'rock' && cChoice === 'paper') {
@@ -65,9 +55,19 @@ function checkWinner(pChoice, cChoice) {
     
 }
 
-console.warn(player);
 
-console.log(checkWinner(player, computer));
+// a playround function thats plays one round of the game.
+
+function playRound() {
+
+    const playerSelection = playerChoice();
+    const computerSelection = computerChoice();
+    return checkWinner(playerSelection, computerSelection);
+
+}    
+
+console.log(playRound());
+
 
 
 
