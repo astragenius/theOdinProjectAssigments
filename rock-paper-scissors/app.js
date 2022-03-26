@@ -12,27 +12,27 @@ function computerChoice() {
 function checkWinner(pChoice, cChoice) {
 
     if(pChoice === 'rock' && cChoice === 'paper') {
-
+        renderComputerPoints();
         return false; 
 
     }if(pChoice === 'rock' && cChoice === 'scissors') {
-
+        renderPlayerPoints();
         return true; 
 
     }if(pChoice === 'paper' && cChoice === 'rock') {
-
+        renderPlayerPoints();
         return true; 
 
     }if(pChoice === 'paper' && cChoice === 'scissors') {
-
+        renderComputerPoints();
         return false; 
 
     }if(pChoice === 'scissors' && cChoice === 'paper') {
-
+        renderPlayerPoints();
         return true;
 
     }if(pChoice === 'scissors' && cChoice === 'rock') {
-
+        renderComputerPoints();
         return false;
     }else {
         /* return `Its a draw! Player: ${pChoice} Computer: ${cChoice}` */
