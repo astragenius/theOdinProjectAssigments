@@ -94,3 +94,10 @@ function renderComputerChoice(choice) {
     computerChoice.textContent = choice;
 }
 
+function renderWinner(text) {
+    const winArea = document.getElementById('win-area');
+    winArea.textContent = text;
+}
+
+renderWinner('Player Winns')
+
