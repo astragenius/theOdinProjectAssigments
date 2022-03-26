@@ -55,6 +55,7 @@ function playRound(pChoice) {
 
 //DOM Element render
 const playBtn = document.querySelectorAll('.btn');
+const resetBtn = document.querySelector('.reset-btn');
 
 playBtn.forEach(btn => {
 
@@ -63,6 +64,8 @@ playBtn.forEach(btn => {
         playRound(choice);
     })
 })
+
+resetBtn.addEventListener('click', resetGame);
 
 
 function renderPlayerChoice(choice) {
@@ -93,6 +96,23 @@ function renderPlayerPoints() {
 function renderComputerPoints() {
     const cPoints = document.getElementById('cPoints');
     cPoints.textContent = ++computerPoints
+}
+
+function resetGame() {
+    const winArea = document.getElementById('win-area');
+    const computerChoice = document.getElementById('computerChoice')
+    const playerChoice = document.getElementById('playerChoice');
+    const pPoints = document.getElementById('pPoints');
+    const cPoints = document.getElementById('cPoints');
+    computerChoice.textContent = "";
+    playerChoice.textContent = "";
+    winArea.textContent = "";
+    pPoints.textContent = "0";
+    cPoints.textContent = "0";
+    playerPoints = 0;
+    computerPoints = 0;
+    
+
 }
 
 
