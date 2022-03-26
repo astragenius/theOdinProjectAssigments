@@ -1,4 +1,5 @@
-
+let playerPoints = 0;
+let computerPoints = 0;
 // a comptuerChoice fuction that gives randomly "rock, paper, siccors" back.
 
 function computerChoice() {
@@ -40,7 +41,6 @@ function checkWinner(pChoice, cChoice) {
     
 }
 
-
 // a playround function thats plays one round of the game.
 
 function playRound(pChoice) {
@@ -52,27 +52,6 @@ function playRound(pChoice) {
     renderWinner(checkWinner(playerSelection, computerSelection));
 
 }    
-
-function game() {
-
-    for(let i = 0; i < 5; i++) {
-        let round = playRound();
-        if(round == true) {
-             console.log('Player won the game')
-        } else if(round == false) {
-            console.log('Computer won the game')
-        }else {
-            console.log('Its a draw');
-        }
-        
-    }
-
-    return 'GAme finished'
-}
-
-
-
-
 
 //DOM Element render
 const playBtn = document.querySelectorAll('.btn');
@@ -106,5 +85,15 @@ function renderWinner(winner) {
         winArea.textContent = 'Computer wins!!!';
     }
 }
+
+function renderPlayerPoints() {
+    const pPoints = document.getElementById('pPoints');
+    pPoints.textContent = ++playerPoints;
+}
+function renderComputerPoints() {
+    const cPoints = document.getElementById('cPoints');
+    cPoints.textContent = ++computerPoints
+}
+
 
 
