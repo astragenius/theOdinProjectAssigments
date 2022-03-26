@@ -34,7 +34,8 @@ function checkWinner(pChoice, cChoice) {
 
         return false;
     }else {
-        return `Its a draw! Player: ${pChoice} Computer: ${cChoice}`;
+        /* return `Its a draw! Player: ${pChoice} Computer: ${cChoice}` */
+        return 'DRAW'
     }
     
 }
@@ -48,7 +49,7 @@ function playRound(pChoice) {
     const computerSelection = computerChoice();
     renderComputerChoice(computerSelection);
     renderPlayerChoice(playerSelection);
-    console.log(checkWinner(playerSelection, computerSelection));
+    renderWinner(checkWinner(playerSelection, computerSelection));
 
 }    
 
@@ -94,10 +95,16 @@ function renderComputerChoice(choice) {
     computerChoice.textContent = choice;
 }
 
-function renderWinner(text) {
+function renderWinner(winner) {
     const winArea = document.getElementById('win-area');
-    winArea.textContent = text;
+    
+    if(winner === true) {
+        winArea.textContent = 'Player wins!!!';
+    }else if(winner === 'DRAW') {
+        winArea.textContent = 'Its a Draw!!!';
+    } else {
+        winArea.textContent = 'Computer wins!!!';
+    }
 }
 
-renderWinner('Player Winns')
 
