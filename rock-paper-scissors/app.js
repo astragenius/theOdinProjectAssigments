@@ -1,24 +1,17 @@
 
 // a comptuerChoice fuction that gives randomly "rock, paper, siccors" back.
-const choices = ['rock', 'paper', 'scissors'];
 
 function computerChoice() {
+    const choices = ['rock', 'paper', 'scissors'];
     let cChoice = choices[Math.floor(Math.random() * 3)];
-    
+    console.log(cChoice);
     return cChoice;
 }
 
 // a playerChoice function that ask the Player with prompt to choose between "rock, paper, scissors"
-function playerChoice() {
-    let input = prompt('Make a choice! "Rock, Paper, Scissors').toLowerCase();
-   
-    if(choices.includes(input)) {
-        return input;
-    } else {
-        alert('Please give "Rock, Paper, Scissors" in the input field!')
-        return "Falscher Wert"
-    }
+function playerChoice(choice) {
     
+   
     
     
 }
@@ -58,11 +51,11 @@ function checkWinner(pChoice, cChoice) {
 
 // a playround function thats plays one round of the game.
 
-function playRound() {
+function playRound(pChoice) {
 
-    const playerSelection = playerChoice();
+    const playerSelection = pChoice
     const computerSelection = computerChoice();
-    return checkWinner(playerSelection, computerSelection);
+    console.log(checkWinner(playerSelection, computerSelection));
 
 }    
 
@@ -88,3 +81,13 @@ function game() {
 
 
 //DOM Element render
+const playBtn = document.querySelectorAll('.btn');
+console.log(playBtn)
+
+playBtn.forEach(btn => {
+
+    btn.addEventListener('click', (e) => {
+        const choice = e.target.dataset.type;
+        playRound(choice);
+    })
+})
