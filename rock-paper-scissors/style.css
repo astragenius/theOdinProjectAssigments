@@ -86,7 +86,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 70vh;
+    border: 2px solid magenta;
 }
 
 button {
@@ -95,9 +96,35 @@ button {
     cursor: pointer;
 }
 
+.btn-container {
+    margin-top: 2em;
+}
+
 .btn {
     
     background-color: lightgreen;
     padding: 0.5em 2em;
 }
+.btn:hover {
+    background-color: yellowgreen;
+}
 
+.flex {
+    display: flex;
+   
+}
+
+.choice-field {
+    
+    flex: 1;
+    min-height: 20vh;
+}
+.display-area {
+    margin-bottom: 6rem;
+   
+}
+.win-area {
+    font-size: 20px;
+    text-transform: uppercase;
+
+}

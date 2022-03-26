@@ -11,17 +11,25 @@
 <body>
 
     <h1>Rock Paper Scissors</h1>
+    <div class="flex">
+        <div class="choice-field"><h3>Computer Choice:</h3></div>
+        <div class="choice-field"><h3>Player Choice:</h3></div>
+
+    </div>
     <main class="wrapper">
         <section class="game-field">
 
-            <div class="display-area"></div>
+            <div class="display-area">
+                <span id="win-area" class="win-area">Computer wins with Paper</span>
+            </div>
             <div>
-                <div>
-                    <h2>Player Choice</h2>
+                
+                <div class="btn-container">
+
+                    <button data-type="rock" class="btn">Rock</button>
+                    <button data-type="paper" class="btn">Paper</button>
+                    <button data-type="scissors" class="btn">Scissors</button>
                 </div>
-                <button data-type="rock" class="btn">Rock</button>
-                <button data-type="paper" class="btn">Paper</button>
-                <button data-type="scissors" class="btn">Scissors</button>
             </div>
 
         </section>
