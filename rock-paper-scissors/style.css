@@ -78,9 +78,26 @@ select {
 
 body {
     font-family: 'Roboto', sans-serif;
+    text-align: center;
+    
+}
+
+main {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid magenta;
+    height: 100vh;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn {
+    
+    background-color: lightgreen;
+    padding: 0.5em 2em;
 }
 
