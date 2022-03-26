@@ -8,14 +8,6 @@ function computerChoice() {
     return cChoice;
 }
 
-// a playerChoice function that ask the Player with prompt to choose between "rock, paper, scissors"
-function playerChoice(choice) {
-    
-   
-    
-    
-}
-
 //a function that checks how has won the game.
 function checkWinner(pChoice, cChoice) {
 
@@ -82,7 +74,6 @@ function game() {
 
 //DOM Element render
 const playBtn = document.querySelectorAll('.btn');
-console.log(playBtn)
 
 playBtn.forEach(btn => {
 
@@ -91,3 +82,15 @@ playBtn.forEach(btn => {
         playRound(choice);
     })
 })
+
+
+function renderPlayerChoice(choice) {
+    const playerChoice = document.getElementById('playerChoice');
+    playerChoice.textContent = choice;
+}
+function renderComputerChoice(choice) {
+    const computerChoice = document.getElementById('computerChoice')
+    computerChoice.textContent = choice;
+}
+
+renderComputerChoice('Hallo')

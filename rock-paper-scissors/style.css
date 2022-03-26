@@ -118,6 +118,14 @@ button {
     
     flex: 1;
     min-height: 20vh;
+   
+    
+}
+
+.choice-field h4 {
+  margin-top: 2em;
+  font-size: 40px;
+  text-transform: uppercase;
 }
 .display-area {
     margin-bottom: 6rem;
