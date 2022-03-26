@@ -94,6 +94,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    padding: 0.5em 2em;
 }
 
 .btn-container {
@@ -103,10 +104,13 @@ button {
 .btn {
     
     background-color: lightgreen;
-    padding: 0.5em 2em;
 }
 .btn:hover {
     background-color: yellowgreen;
+}
+.reset-btn {
+  margin-top: 1em;
+  background-color: orangered;
 }
 
 .flex {
