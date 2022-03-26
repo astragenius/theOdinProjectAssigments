@@ -4,7 +4,6 @@
 function computerChoice() {
     const choices = ['rock', 'paper', 'scissors'];
     let cChoice = choices[Math.floor(Math.random() * 3)];
-    console.log(cChoice);
     return cChoice;
 }
 
@@ -47,6 +46,8 @@ function playRound(pChoice) {
 
     const playerSelection = pChoice
     const computerSelection = computerChoice();
+    renderComputerChoice(computerSelection);
+    renderPlayerChoice(playerSelection);
     console.log(checkWinner(playerSelection, computerSelection));
 
 }    
@@ -93,4 +94,3 @@ function renderComputerChoice(choice) {
     computerChoice.textContent = choice;
 }
 
-renderComputerChoice('Hallo')
