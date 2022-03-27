@@ -32,11 +32,14 @@ function removeItems() {
 
 }
 
-
-createGrid();
-
 rangeInput.addEventListener('change', () => {
 
     removeItems();
     createGrid(rangeInput.value);
 })
+
+
+console.log(rangeInput.defaultValue)
+
+
+createGrid(rangeInput.defaultValue);
