@@ -2,8 +2,11 @@ const grid = document.getElementById('container');
 const rangeInput = document.querySelector('input[type="range"]');
 const eraseBtn = document.querySelector('.erase-btn');
 const colorBtn = document.querySelector('.color-btn');
-let currendColor = 'black';
+const randomBtn = document.querySelector('.random-btn');
+const greyBtn = document.querySelector('.grey-btn');
+let currendMode = 'black';
 let rgbColor = "";
+let hue = 0.1;
 
 
 
@@ -29,9 +32,9 @@ function createGrid(size = 16) {
     }
 }
 
-function setCurrentColor(color) {
+function setCurrentMode(mode) {
 
-    currendColor = color;
+   currendMode = mode;
 }
 
 function randomColor() {
@@ -39,30 +42,44 @@ function randomColor() {
     const blue = Math.floor(Math.random() * 255);
     const green = Math.floor(Math.random() * 255);
     rgbColor = `rgb(${red}, ${blue}, ${green});`
-    console.log(rgbColor);
+    console.log(rgbColor)
     return rgbColor;
 }
-randomColor();
+
 
 
 function setColor(e) {
-    if(currendColor == 'black') {
-        e.target.style.cssText = `background-color: ${currendColor}`;
-    }else if(currendColor == 'white') {
-        e.target.style.cssText = `background-color: ${currendColor}`;
-    }else {
+   
+    if(currendMode == 'black') {
+        e.target.style.cssText = `background-color: ${currendMode}`;
+    }else if(currendMode == 'white') {
+        e.target.style.cssText = `background-color: ${currendMode}`;
+    }else if(currendMode == 'random'){
         e.target.style.cssText = `background-color: ${rgbColor}`;
+    }else {
+
     }
     
 }
 
 eraseBtn.addEventListener('click', () => {
-    setCurrentColor('white');
+    setCurrentMode('white');
 })
 
 colorBtn.addEventListener('click', () => {
-    setCurrentColor('black');
+    setCurrentMode('black');
 })
+
+randomBtn.addEventListener('click', () => {
+   setCurrentMode('random');
+   randomColor();
+  
+})
+
+greyBtn.addEventListener('click', ()=> {
+    setCurrentMode('grey');
+
+} )
 
 
 rangeInput.addEventListener('change', () => {
