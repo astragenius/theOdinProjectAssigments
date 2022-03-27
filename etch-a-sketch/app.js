@@ -1,4 +1,6 @@
 const grid = document.getElementById('container');
+const rangeInput = document.querySelector('input[type="range"]');
+
 
 
 
@@ -15,15 +17,18 @@ function createItem() {
 
 function createGrid(size) {
 
-    for(let i = 0; i < size; i++) {
+    grid.style.cssText = `grid-template-columns: repeat(${size}, auto); grid-template-rows: repeat(${size}, auto);`;
+    for(let i = 0; i < (size * size); i++) {
 
         createItem();
         
     }
 }
 
-createGrid((16 * 16));
+createGrid(48);
 
+
+console.log(rangeInput.value);
 
 
 

@@ -96,14 +96,13 @@ h1 {
 
 .container {
   max-width: 960px;
-  
   display: grid;
-  grid-template-columns: repeat(16, auto);
-  grid-template-rows: repeat(16, auto);
-
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: 2px solid black;
 }
 .item {
-  border: 1px solid black;
+  border: 1px solid hsla(0, 0%, 83%, 0.356);
   width: auto;
   aspect-ratio: 1;
 }
