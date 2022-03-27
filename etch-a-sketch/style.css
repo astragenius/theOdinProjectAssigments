@@ -74,3 +74,49 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+
+
+/* BAsic styling */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.container {
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+
+}
+.item {
+  border: 1px solid black;
+  width: calc(960 / 16);
+  aspect-ratio: 1;
+}
+
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid magenta;
+  height: 90vh;
+}
+
+.btn {
+  border: none;
+  padding: 0.5em 1.5em;
+}
