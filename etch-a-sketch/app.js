@@ -16,8 +16,8 @@ function createItem() {
 
 
 function createGrid(size) {
-
     grid.style.cssText = `grid-template-columns: repeat(${size}, auto); grid-template-rows: repeat(${size}, auto);`;
+
     for(let i = 0; i < (size * size); i++) {
 
         createItem();
@@ -25,15 +25,17 @@ function createGrid(size) {
     }
 }
 
-createGrid(48);
 
 
-console.log(rangeInput.value);
+createGrid(16)
 
 
+function removeItems() {
+    const item = document.querySelectorAll('.item');
+    
+    item.forEach(el => {
+        
+        el.remove(); 
+    })
 
-
-
-
-
-
+}
