@@ -40,7 +40,7 @@ function removeItems() {
 
 rangeInput.addEventListener('change', () => {
 
-    removeItems();
+    grid.innerHTML = "";
     createGrid(rangeInput.value);
 })
 
