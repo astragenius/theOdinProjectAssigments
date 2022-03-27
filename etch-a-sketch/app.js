@@ -10,6 +10,7 @@ function createItem() {
 
     const item = document.createElement("div");
     item.setAttribute('class', 'item');
+    item.addEventListener('mouseenter', setColor);
     grid.appendChild(item);
 
 }
@@ -25,6 +26,11 @@ function createGrid(size = 16) {
     }
 }
 
+function setColor(e) {
+    e.target.style.cssText = "background-color: black;";
+    
+}
+
 function removeItems() {
     const item = document.querySelectorAll('.item');
     
@@ -37,9 +43,5 @@ rangeInput.addEventListener('change', () => {
     removeItems();
     createGrid(rangeInput.value);
 })
-
-
-console.log(rangeInput.defaultValue)
-
 
 createGrid(rangeInput.defaultValue);
