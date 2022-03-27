@@ -1,6 +1,9 @@
 const grid = document.getElementById('container');
 const rangeInput = document.querySelector('input[type="range"]');
-
+const eraseBtn = document.querySelector('.erase-btn');
+const colorBtn = document.querySelector('.color-btn');
+let currendColor = 'black';
+let rgbColor = "";
 
 
 
@@ -26,17 +29,41 @@ function createGrid(size = 16) {
     }
 }
 
+function setCurrentColor(color) {
+
+    currendColor = color;
+}
+
+function randomColor() {
+    const red = Math.floor(Math.random() * 255);
+    const blue = Math.floor(Math.random() * 255);
+    const green = Math.floor(Math.random() * 255);
+    rgbColor = `rgb(${red}, ${blue}, ${green});`
+    console.log(rgbColor);
+    return rgbColor;
+}
+randomColor();
+
+
 function setColor(e) {
-    e.target.style.cssText = "background-color: black;";
+    if(currendColor == 'black') {
+        e.target.style.cssText = `background-color: ${currendColor}`;
+    }else if(currendColor == 'white') {
+        e.target.style.cssText = `background-color: ${currendColor}`;
+    }else {
+        e.target.style.cssText = `background-color: ${rgbColor}`;
+    }
     
 }
 
-function removeItems() {
-    const item = document.querySelectorAll('.item');
-    
-    item.forEach(el => { el.remove(); })
+eraseBtn.addEventListener('click', () => {
+    setCurrentColor('white');
+})
 
-}
+colorBtn.addEventListener('click', () => {
+    setCurrentColor('black');
+})
+
 
 rangeInput.addEventListener('change', () => {
 
