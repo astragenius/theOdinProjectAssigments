@@ -1,4 +1,82 @@
-label {
-    display: flex;
-    flex-direction: column;
+.form-heading {
+    color: var(--font-color);
+    font-family: 'Roboto';
+    font-weight: bold;
 }
+
+.submit-btn {
+    border: none;
+    background-color: hsl(var(--btn-color) / 1);
+    color: white;
+    padding: 0.5em 2em;
+    border-radius: .3em;
+    box-shadow: var(--bg-shadow);
+    cursor: pointer;
+    margin-top: 1em;
+
+    &:hover {
+        background-color: hsl(var(--btn-color) / 0.7);
+    }
+}
+
+
+form {
+    color: var(--font-color);
+    font-family: 'Roboto';
+    
+
+    legend {
+        font-weight: bold;
+        font-size: 1.4rem;
+    }
+
+    fieldset {
+        box-shadow: var(--bg-shadow);
+        font-weight: 300;
+        border: none;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1em;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        
+    }
+
+    input {
+        border: 1px solid var(--border-color);
+        padding: 0.5rem;
+        border-radius: 6px;
+
+        &:focus {
+            box-shadow: var(--bg-shadow);
+            outline: 1px solid blue;
+        }
+    }
+    
+    
+}
+
+
+.form-section-footer {
+    font-family: inherit;
+    margin-top: 1em;
+    color: var(--font-color);
+    font-weight: bold;
+
+    a {
+        color: hsl(var(--btn-color) / 1);
+        font-weight: bold;
+        text-decoration: none;
+
+        &:hover {
+            color: hsl(var(--btn-color) / 0.7);
+        }
+    }
+
+
+}
+
+
