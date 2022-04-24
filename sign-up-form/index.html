@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="scss/dist/index.css">
+    <script defer src="app.js"></script>
     <title>Sign up form</title>
 </head>
 <body>
@@ -33,34 +34,35 @@
                             
                             <legend>Let's do this!</legend>
                         </div>
-                        <div>
+                        <div class="input-flex">
     
                             <label for="first_name">First Name
 
-                                <input type="text" name="first_name" id="first_name">
+                                <input type="text" name="first_name" id="first_name" required>
                             </label>
     
                             <label for="last_name">Last Name
 
-                                <input type="text" name="last_name" id="last_name">
+                                <input type="text" name="last_name" id="last_name" >
                             </label>
                         </div>
 
-                        <div>
+                        <div class="input-flex">
                             <label for="email">Email
 
-                                <input type="email" name="email" id="email">
+                                <input type="email" name="email" id="email" >
+                                <p class="help">Please enter a valid email address</p>
                             </label>
                             <label for="phone_number">Phone Number
-                                <input type="tel" name="phone_number" id="phone_number">
+                                <input type="tel" name="phone_number" id="phone_number" >
 
                             </label>
                         </div>
 
-                        <div>
+                        <div class="input-flex">
                             <label for="password">Password
 
-                                <input type="password" name="password" id="password">
+                                <input type="password" name="password" id="password" minlength="5" maxlength="10" required>
                             </label>
                             <label for="confirm_password">Confirm Password
 
