@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(/sign-up-form/assets/fonts/Roboto-Light.ttf) format('truetype');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(/sign-up-form/assets/fonts/Roboto-Medium.ttf) format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(/sign-up-form/assets/fonts/Roboto-Regular.ttf) format('truetype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(/sign-up-form/assets/fonts/Roboto-Bold.ttf) format('truetype');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Norse';
+    src: url(/sign-up-form/assets/fonts/Norse-Bold.otf);
+    font-weight: bold;
+}
+
+/* System fallback */
+@font-face {
+    font-family: 'system';
+    font-style: normal;
+    font-weight: 300;
+    src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
