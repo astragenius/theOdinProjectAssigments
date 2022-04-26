@@ -98,18 +98,29 @@ form {
     
     
 }
-.error-msg {
+.error-msg,
+.error-password {
     position: relative;
 }
 
 .error-msg::before {
 
     content: "* Please enter a valid email address";
-    color: red;
+    color: var(--error-color);
     position: absolute;
     bottom: -20px;
     font-size: 11px;
 }
+.error-password::before {
+    content: '*Password dont match';
+    color: var(--error-color);
+    position: absolute;
+    bottom: -20px;
+    font-size: 11px;
+
+}
+
+
 
 .input-flex {
     

@@ -28,7 +28,7 @@
                    <p>This is not a real online service! You know you need something like this in your life to help your realize your deepest dreams.Sign up now to get started.</p>
                    <p>You know you want to.</p>
                 </header>
-                <form action="" class="myForm">
+                <form action="" method="POST" autocomplete="on" class="myForm">
                     <fieldset>
                         <div>
                             
@@ -48,7 +48,7 @@
                         </div>
 
                         <div class="input-flex">
-                            <label for="email" class="error-msg">Email
+                            <label for="email">Email
 
                                 <input type="email" name="email" id="email" required placeholder=" ">
                                 <!-- <p class="help">Please enter a valid email address</p> -->
@@ -60,7 +60,7 @@
                         </div>
 
                         <div class="input-flex">
-                            <label for="password">Password
+                            <label for="password" class="error-password">Password
 
                                 <input type="password" name="password" id="password" minlength="5" maxlength="10" required placeholder=" ">
                             </label>
