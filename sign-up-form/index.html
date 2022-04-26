@@ -28,7 +28,7 @@
                    <p>This is not a real online service! You know you need something like this in your life to help your realize your deepest dreams.Sign up now to get started.</p>
                    <p>You know you want to.</p>
                 </header>
-                <form action="">
+                <form action="" class="myForm">
                     <fieldset>
                         <div>
                             
@@ -38,23 +38,23 @@
     
                             <label for="first_name">First Name
 
-                                <input type="text" name="first_name" id="first_name" required>
+                                <input type="text" name="first_name" id="first_name" required placeholder="">
                             </label>
     
                             <label for="last_name">Last Name
 
-                                <input type="text" name="last_name" id="last_name" >
+                                <input type="text" name="last_name" id="last_name" required placeholder=" ">
                             </label>
                         </div>
 
                         <div class="input-flex">
-                            <label for="email">Email
+                            <label for="email" class="error-msg">Email
 
-                                <input type="email" name="email" id="email" >
-                                <p class="help">Please enter a valid email address</p>
+                                <input type="email" name="email" id="email" required placeholder=" ">
+                                <!-- <p class="help">Please enter a valid email address</p> -->
                             </label>
                             <label for="phone_number">Phone Number
-                                <input type="tel" name="phone_number" id="phone_number" >
+                                <input type="tel" name="phone_number" id="phone_number" required placeholder=" ">
 
                             </label>
                         </div>
@@ -62,11 +62,11 @@
                         <div class="input-flex">
                             <label for="password">Password
 
-                                <input type="password" name="password" id="password" minlength="5" maxlength="10" required>
+                                <input type="password" name="password" id="password" minlength="5" maxlength="10" required placeholder=" ">
                             </label>
                             <label for="confirm_password">Confirm Password
 
-                                <input type="password" name="confirm_password" id="confirm_password">
+                                <input type="password" name="confirm_password" id="confirm_password" required placeholder=" ">
                             </label>
                         </div>
 

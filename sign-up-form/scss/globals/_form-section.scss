@@ -64,7 +64,7 @@ form {
     label {
         display: flex;
         flex-direction: column;
-        padding-top: 1em;
+        padding-top: 2em;
         text-transform: uppercase;
         font-size: 0.8rem;
         width: 100%;
@@ -84,15 +84,31 @@ form {
             box-shadow: var(--bg-shadow);
             outline: 1px solid blue;
         }
-        &:invalid {
-            border-color: red;
+        
+        &:invalid:not(:focus):not(:placeholder-shown) {
+            background: pink;
         }
         &:valid {
             border-color: green;
         }
+
+        
     }
+
     
     
+}
+.error-msg {
+    position: relative;
+}
+
+.error-msg::before {
+
+    content: "* Please enter a valid email address";
+    color: red;
+    position: absolute;
+    bottom: -20px;
+    font-size: 11px;
 }
 
 .input-flex {
