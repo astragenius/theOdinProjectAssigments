@@ -93,6 +93,10 @@ form {
             border-color: green;
         }
 
+        &:invalid {
+            border-color: var(--error-color);
+        }
+
         
     }
 

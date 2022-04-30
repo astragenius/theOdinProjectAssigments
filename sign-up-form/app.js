@@ -4,50 +4,56 @@ const submitBtn = document.querySelector('.submit-btn');
 
 
 
+const firstName = document.getElementById('first_name')
 
 
-submitBtn.addEventListener('click', validateForm);
 
 
-function validateForm() {
-    const regExEmail = /^hello/;
-    const email = document.getElementById('email').value.trim();
-    const firstName = document.getElementById('first_name').value.trim()
-    const lastName = document.getElementById('last_name').value.trim();
-    const phone = document.getElementById('phone_number').value.trim();
-    const password = document.getElementById('password').value.trim();
-    const confirm = document.getElementById('confirm_password').value.trim();
 
-    if(email === "") {
-        console.log('email darf nicht leer sein')
-        // error msg
 
-    }else if(regExEmail.test(email)) {
-       
-        //regEx test ob email valide ist.
-        // wenn true valide symbol
-        console.log('Email ist valide')
-    }else {
-        //gib eine valide email ein.
-        //error msg
-        console.log('Email ist nicht valide');
+
+const regExEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+const lastName = document.getElementById('last_name')
+const phone = document.getElementById('phone_number').value.trim();
+const password = document.getElementById('password');
+const confirm = document.getElementById('confirm_password')
+const email = document.getElementById('email');
+
+    
+
+firstName.addEventListener('input', function(event) {
+    console.log(firstName.validity.valueMissing)
+
+    firstName.value = firstName.value.trim();
+
+    if(firstName.validity.valueMissing) {
+        console.log('Bitte geben sie einen Namen ein')
     }
-
-    if(password === "" && confirm === "") {
-
-        // password eingeben bitte
-        console.log('Password eingeben')
-    }else if(password === confirm) {
-        // password ist gleich confirm
-        // valide 
-        console.log('Password stimmt überein')
-    }else {
-        // password ist nicht gleich
-        //error msg
-        console.log('Password stimmt nicht überein.')
-    }
-
 
    
+})
 
-};
+lastName.addEventListener('input', function() {
+    if(lastName.validity.valueMissing) {
+        console.log('Bitte geben sie einen Nachnamen ein')
+    }
+})
+
+email.addEventListener('input', function() {
+    console.log(email.validity.valid)
+    if(!email.validity.valueMissing && email.validity.patternMismatch) {
+        console.log('Bitte geben sie eine Email ein')
+    }else {
+        console.log('Email ist valide')
+    }
+    
+})
+
+
+
+
+form.addEventListener('submit', function(event) {
+
+
+})
