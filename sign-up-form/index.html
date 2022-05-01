@@ -28,7 +28,7 @@
                    <p>This is not a real online service! You know you need something like this in your life to help your realize your deepest dreams.Sign up now to get started.</p>
                    <p>You know you want to.</p>
                 </header>
-                <form action="" method="POST" autocomplete="on" class="myForm" novalidate>
+                <form action="http://httpbin.org/post" method="POST" autocomplete="on" class="myForm" novalidate>
                     <fieldset>
                         <div>
                             
@@ -38,12 +38,14 @@
     
                             <label for="first_name">First Name
 
-                                <input type="text" name="first_name" id="first_name"  placeholder="">
+                                <input type="text" name="first_name" id="first_name"  placeholder=" " required>
+                                <p class="error"></p>
                             </label>
     
                             <label for="last_name">Last Name
 
                                 <input type="text" name="last_name" id="last_name" required placeholder=" ">
+                                <p class="error"></p>
                             </label>
                         </div>
 
@@ -54,8 +56,8 @@
                                 <p class="error"></p>
                             </label>
                             <label for="phone_number">Phone Number
-                                <input type="tel" name="phone_number" id="phone_number" required placeholder=" " pattern="^[0-9]*$">
-
+                                <input type="tel" name="phone_number" id="phone_number" required placeholder=" " pattern="^[0-9]*$"  maxlength="10">
+                                <p class="error"></p>
                             </label>
                         </div>
 

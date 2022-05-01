@@ -1,7 +1,7 @@
 const form = document.querySelector('.myForm');
 const submitBtn = document.querySelector('.submit-btn');
 const firstName = document.getElementById('first_name')
-const regExEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 
 const lastName = document.getElementById('last_name')
 const phone = document.getElementById('phone_number')
@@ -9,71 +9,90 @@ const password = document.getElementById('password');
 const confirm = document.getElementById('confirm_password')
 const email = document.getElementById('email');
 
+function init() {
 
     
-
-firstName.addEventListener('change', function(event) {
-    console.log(firstName.validity.valueMissing)
-
-    firstName.value = firstName.value.trim();
-
-    if(firstName.validity.valueMissing) {
-        console.log('Bitte geben sie einen Namen ein')
-    }
-
-   
-})
-
-lastName.addEventListener('change', function() {
-    if(lastName.validity.valueMissing) {
-        console.log('Bitte geben sie einen Nachnamen ein')
-    }
-})
-
-email.addEventListener('change', function() {
-    console.log(email.validity.valid)
-    if(!email.validity.valueMissing && email.validity.patternMismatch) {
-        console.log('Bitte geben sie eine Email ein')
-    }else {
-        console.log('Email ist valide')
-    }
+    firstName.addEventListener('input', function(event) {
+        
     
-})
-
-phone.addEventListener('change', function() {
-    phone.value = phone.value.trim();
-    if(phone.validity.valid) {
-        console.log('Tel number ist ok!!')
-    }else {
-        console.log('Bitte geben sie eine Tel numer ein')
-    }
-})
-
-password.addEventListener('change', function() {
-
-})
-
-confirm.addEventListener('input', function() {
-    console.log(confirm)
+        firstName.value = firstName.value.trim();
     
-    if(confirm.value.trim() === password.value.trim()) {
-        //passwordConfirm = true;
-        errorMsg('', confirm);
+        if(firstName.validity.valueMissing) {
+            errorMsg('*please enter your first name', firstName);
+        }else {
+            errorMsg('', firstName);
+        }
+    
        
-    }else {
-        console.log('Password stimmt nicht überein')
-        //passwordConfirm = false;
-        errorMsg('Password does not match', confirm);
+    })
+    
+    lastName.addEventListener('input', function() {
+        console.log(lastName.validity.valueMissing)
+        if(lastName.validity.valueMissing) {
+            errorMsg('*please enter your last name', lastName);
+        }else {
+            errorMsg('', lastName);
+        }
+    })
+    
+    email.addEventListener('change', function() {
+        console.log(email.validity.valid)
+        if(!email.validity.valueMissing && email.validity.patternMismatch) {
+            errorMsg('*please enter an valid email adress', email)
+        }else {
+            console.log('Email ist valide')
+            errorMsg('', email)
+        }
+        
+    })
+    
+    phone.addEventListener('change', function() {
+        phone.value = phone.value.trim();
+        console.log(phone)
+        if(phone.validity.valid) {
+            errorMsg('', phone);
+        }else {
+            errorMsg('*please enter an valid phone number', phone)
+        }
+    })
+    
+    password.addEventListener('input', function() {
+        
+        if(password.value.trim() === confirm.value.trim()) {
+            errorMsg('', confirm);
+        }
+    })
+    
+    confirm.addEventListener('input', function() {
+        
+        
+        if(confirm.value.trim() === password.value.trim()) {
+            
+            errorMsg('', confirm);
+            errorBorder(confirm, 'green')
+            
+           
+        }else {
+            console.log('Password stimmt nicht überein')
+           
+            errorMsg('Password does not match', confirm);
+            errorBorder(confirm, 'red');
+        }
+    })
+    
+    function errorMsg(msg, input) {
+    
+        let element = input.nextElementSibling;
+        element.textContent = msg;
     }
-})
+    function errorBorder(input, color) {
 
-function errorMsg(msg, input) {
-
-    let element = input.nextElementSibling;
-    element.textContent = msg;
+        input.style.borderColor = color;
+    }
 }
+    
 
-
+init();
 
 form.addEventListener('submit', function(event) {
     
