@@ -132,3 +132,53 @@ select {
     --dark-gray: #262626;
 
 }
+
+/* Util classes */
+.wrapper {
+    position: relative;
+    width: 90vw;
+    width: clamp(16rem, 90vw, 90rem);
+    margin-inline: auto;
+    padding: 0 1.5rem 0 1.5rem; 
+    border: 2px solid green;
+    height: 100vh;
+    
+}
+
+
+
+/* grid */
+
+.grid-container {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.header {
+    border: 2px solid green;
+    grid-column: 2 / -1;
+
+    
+}
+
+.header_up {
+    display: flex;
+}
+.header_down {
+    display: flex;
+}
+
+.sidebar {
+    border: 2px solid magenta;
+    grid-row: 1 / 6;
+
+
+}
+
+.content {
+    border: 2px solid blue;
+    grid-column: 2 / -1;
+    grid-row: 2 / 6;
+}
