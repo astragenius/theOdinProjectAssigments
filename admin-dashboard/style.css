@@ -272,3 +272,24 @@ body {
   text-decoration: none;
   
 }
+
+
+
+/* Header Styling */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-inline: 1em;
+ 
+}
+
+.header-btn {
+  background: none;
+  border: none;
+  background-color: var(--blue-500);
+  color: var(--white);
+  padding: 0.4em 1.3em;
+  border-radius: 1rem;
+}
