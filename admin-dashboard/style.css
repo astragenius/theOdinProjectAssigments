@@ -175,6 +175,7 @@ body {
 .header {
     /* border: 2px solid green; */
     grid-column: 2 / -1;
+    margin-left: 1em;
 
     
 }
@@ -183,6 +184,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1.5em;
 }
 .header_up .search {
   flex: 2;
@@ -205,28 +207,23 @@ body {
   display: flex;
   flex: 1;
   justify-content: space-evenly;
+  align-items: center;
 }
+
 
 .header_down {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 0.5em;
 }
 .header_down .profile_container {
   display: flex;
 }
-.header_down .profile_icon span{
-  font-size: 50px;
+.header_down .profile_icon {
+  margin-right: 1em;
 }
 
-.profile_name > p:first-child {
-  font-size: 12px;
-  font-weight: bold;
-}
-.profile_name > p:last-child {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
 
 
 
@@ -329,8 +326,35 @@ body {
   border: none;
   background-color: var(--blue-500);
   color: var(--white);
-  padding: 0.4em 1.3em;
+  padding: 0.4em 1.9em;
   border-radius: 1rem;
+  margin-right: 2em;
+  cursor: pointer;
+}
+
+.header_up input {
+  border: none;
+  height: 2.1875rem;
+  background-color: var(--gray);;
+  border-radius: 1rem;
+ 
+}
+
+.header_up .profile > span:nth-of-type(2) {
+  font-size: 2.5rem;
+}
+
+.header_down .profile_icon span{
+  font-size: 4rem;
+}
+
+.profile_name > p:first-child {
+  font-size: 12px;
+  font-weight: bold;
+}
+.profile_name > p:last-child {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 
